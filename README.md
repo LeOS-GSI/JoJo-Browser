@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="" src="JoJo.png" align="center">
+<img width="128" src="JoJo.png" align="center">
 
 # JoJo-Browser
 
