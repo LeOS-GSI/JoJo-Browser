@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>JoJo</id>
+    <version>${CHOCO_VERSION}</version>
+    <title>JoJo-Browser</title>
+    <authors>JoJo-Browser contributors</authors>
+    <projectUrl>https://LeOS-GSI.de</projectUrl>
+    <iconUrl>https://glcdn.githack.com/librewolf-community/branding/-/raw/master/icon/icon.svg</iconUrl>
+    <licenseUrl>https://gitlab.com/librewolf-community/browser/source/-/blob/main/LICENSE</licenseUrl>
+    <packageSourceUrl>https://github.com/maltejur/librewolf-choco</packageSourceUrl>
+    <releaseNotes>https://gitlab.com/librewolf-community/browser/bsys6/-/releases</releaseNotes>
+    <docsUrl>https://librewolf.net/docs</docsUrl>
+    <bugTrackerUrl>https://gitlab.com/librewolf-community/browser/windows/-/issues</bugTrackerUrl>
+    <projectSourceUrl>https://gitlab.com/librewolf-community/browser/windows</projectSourceUrl>
+    <tags>browser librewolf firefox fork</tags>
+    <summary>A fork of Firefox, focused on privacy, security and freedom.</summary>
+    <description>This project is an independent fork of Firefox, with the primary goals of privacy, security and user freedom.
+
+JoJo-Browser is designed to increase protection against tracking and fingerprinting techniques, while also including a few security improvements. This is achieved through our privacy and security oriented settings and patches. JoJo-Browser also aims to remove all the telemetry, data collection and annoyances, as well as disabling anti-freedom features like DRM.
+
+**JoJo-Browser is NOT associated with Mozilla or its products.**
+
+## Features
+
+- **No Telemetry** — No experiments, adware, annoyances, or unnecessary distractions.
+- **Private Search** — Privacy-conscious search providers: [DuckDuckGo](https://duckduckgo.com/), [Searx](https://searx.be/), [Whoogle](https://search.garudalinux.org/) and more.
+- **Content Blocker Included** — [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin) is already included for your convenience.
+- **Enhanced Privacy** — Hardened to maximize privacy, without sacrificing usability.
+- **Fast Updates** — JoJo-Browser is always built from the latest Firefox stable source, for up-to-date security and features along with stability.
+- **Open Source** — Everyone can participate in the development of JoJo-Browser. Join us on [Telegram](https://t.me/LeOS_Support).
+
+For more details read the full [feature list](https://librewolf.net/docs/features).
+</description>
+    <dependencies>
+      <dependency id="vcredist140" version="14.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools/**" target="tools" />
+  </files>
+</package>
