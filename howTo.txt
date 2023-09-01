@@ -1,0 +1,36 @@
+für build and test:
+from main folder (JoJo-Browser)
+cp -R JoJo-Branding/source_files/browser/branding/librewolf librewolf-source/themes/browser/branding/
+cp -R JoJo-Branding/source_files/browser/base/content/ librewolf-117.0-1/browser/base/content/
+cp -R /media/ich/exSSD3/JoJo-browser/JoJo-Branding/source_files/browser/browser/storage /media/ich/exSSD3/JoJo-browser/librewolf-source/librewolf-117.0-1/
+cp -R /media/ich/exSSD3/JoJo-browser/JoJo-Branding/source_files/browser/browser/*.* /media/ich/exSSD3/JoJo-browser/librewolf-source/librewolf-117.0-1/
+cp /media/ich/exSSD3/JoJo-browser/JoJo-Branding/policies.json /media/ich/exSSD3/JoJo-browser/librewolf-source/librewolf-117.0-1/lw/
+cp /media/ich/exSSD3/JoJo-browser/JoJo-Branding/preferences.ftl /media/ich/exSSD3/JoJo-browser/librewolf-source/librewolf-117.0-1/browser/locales/en-US/browser/preferences/preferences.ftl
+cp /media/ich/exSSD3/JoJo-browser/JoJo-Branding/preferences.ftl.orig /media/ich/exSSD3/JoJo-browser/librewolf-source/librewolf-117.0-1/browser/locales/en-US/browser/preferences/preferences.ftl.orig
+
+
+cp /media/ich/exSSD3/JoJo-browser/JoJo-Branding/category-librewolf.svg /media/ich/exSSD3/JoJo-browser/librewolf-source/librewolf-117.0-1/browser/themes/shared/preferences/category-librewolf.svg
+
+
+
+für deb creation:
+cp -R /media/ich/exSSD3/JoJo-browser/JoJo-Branding/source_files/browser/branding/librewolf /home/ich/.local/share/bsys6/work/librewolf-117.0-1/browser/branding/
+cp -R /media/ich/exSSD3/JoJo-browser/JoJo-Branding/source_files/browser/base/content /home/ich/.local/share/bsys6/work/librewolf-117.0-1/browser/base/
+
+???????????????
+cp -R /media/ich/exSSD3/JoJo-browser/JoJo-Branding/source_files/browser/base/content/aboutDialog.xhtml /home/ich/.local/share/bsys6/work/librewolf-117.0-1/obj-x86_64-pc-linux-gnu/dist/bin/browser/chrome/browser/content/browser
+???????????????????
+
+cp -R /media/ich/exSSD3/JoJo-browser/JoJo-Branding/source_files/browser/browser/storage /home/ich/.local/share/bsys6/work/librewolf-117.0-1/
+cp -R /media/ich/exSSD3/JoJo-browser/JoJo-Branding/source_files/browser/browser/*.* /home/ich/.local/share/bsys6/work/librewolf-117.0-1/
+cp /media/ich/exSSD3/JoJo-browser/JoJo-Branding/policies.json /home/ich/.local/share/bsys6/work/librewolf-117.0-1/lw/
+cp /media/ich/exSSD3/JoJo-browser/JoJo-Branding/preferences.ftl /home/ich/.local/share/bsys6/work/librewolf-117.0-1/browser/locales/en-US/browser/preferences/preferences.ftl
+cp /media/ich/exSSD3/JoJo-browser/JoJo-Branding/preferences.ftl.orig /home/ich/.local/share/bsys6/work/librewolf-117.0-1/browser/locales/en-US/browser/preferences/preferences.ftl.orig
+cp /media/ich/exSSD3/JoJo-browser/JoJo-Branding/category-librewolf.svg  /home/ich/.local/share/bsys6/work/librewolf-117.0-1/browser/themes/shared/preferences/
+
+
+cd ~/.local/share/bsys6/work/librewolf-117.0-1/browser/locales/l10n
+grep -RiIl '= LibreWolf' | xargs sed -i 's/= LibreWolf/= JoJo-Browser/g'
+cd /media/ich/exSSD3/JoJo-browser/librewolf-source/librewolf-117.0-1/browser/locales/l10n
+grep -RiIl '= LibreWolf' | xargs sed -i 's/= LibreWolf/= JoJo-Browser/g'
+

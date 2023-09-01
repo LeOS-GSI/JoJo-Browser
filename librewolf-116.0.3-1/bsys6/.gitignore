@@ -1,0 +1,11 @@
+/env.sh
+/*.exe
+/*.tar.*
+/*.sha256sum
+/*.zip
+/*.nupkg
+/*.msix
+/*.sig
+/*.dmg
+/*.deb
+/*.rpm
