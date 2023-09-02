@@ -19,7 +19,7 @@ ext="${file##*.}"
 if [[ "${file%.*}" == *".tar" ]]; then
   ext="tar.$ext"
 fi
-unique_file_name="jojo-$FULL_VERSION-$TARGET-$ARCH-${1,,}"
+unique_file_name="librewolf-$FULL_VERSION-$TARGET-$ARCH-${1,,}"
 if [ "$#" -lt 4 ]; then
   new_file="$unique_file_name.$ext"
 elif [ "${4,,}" == "!keep" ]; then

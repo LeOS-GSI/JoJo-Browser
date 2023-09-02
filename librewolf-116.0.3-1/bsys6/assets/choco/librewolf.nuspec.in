@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>JoJo</id>
+    <id>librewolf</id>
     <version>${CHOCO_VERSION}</version>
-    <title>JoJo-Browser</title>
-    <authors>JoJo-Browser contributors</authors>
-    <projectUrl>https://LeOS-GSI.de</projectUrl>
+    <title>LibreWolf</title>
+    <authors>LibreWolf contributors</authors>
+    <projectUrl>https://librewolf.net</projectUrl>
     <iconUrl>https://glcdn.githack.com/librewolf-community/branding/-/raw/master/icon/icon.svg</iconUrl>
     <licenseUrl>https://gitlab.com/librewolf-community/browser/source/-/blob/main/LICENSE</licenseUrl>
     <packageSourceUrl>https://github.com/maltejur/librewolf-choco</packageSourceUrl>
@@ -17,18 +17,18 @@
     <summary>A fork of Firefox, focused on privacy, security and freedom.</summary>
     <description>This project is an independent fork of Firefox, with the primary goals of privacy, security and user freedom.
 
-JoJo-Browser is designed to increase protection against tracking and fingerprinting techniques, while also including a few security improvements. This is achieved through our privacy and security oriented settings and patches. JoJo-Browser also aims to remove all the telemetry, data collection and annoyances, as well as disabling anti-freedom features like DRM.
+LibreWolf is designed to increase protection against tracking and fingerprinting techniques, while also including a few security improvements. This is achieved through our privacy and security oriented settings and patches. LibreWolf also aims to remove all the telemetry, data collection and annoyances, as well as disabling anti-freedom features like DRM.
 
-**JoJo-Browser is NOT associated with Mozilla or its products.**
+**LibreWolf is NOT associated with Mozilla or its products.**
 
 ## Features
 
 - **No Telemetry** — No experiments, adware, annoyances, or unnecessary distractions.
-- **Private Search** — Privacy-conscious search providers: [DuckDuckGo](https://duckduckgo.com/), [Searx](https://searx.be/), [Whoogle](https://search.garudalinux.org/) and more.
+- **Private Search** — Privacy-conscious search providers: [DuckDuckGo](https://duckduckgo.com/), [Searx](https://searx.be/), [Qwant](https://www.qwant.com/) and more.
 - **Content Blocker Included** — [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin) is already included for your convenience.
 - **Enhanced Privacy** — Hardened to maximize privacy, without sacrificing usability.
-- **Fast Updates** — JoJo-Browser is always built from the latest Firefox stable source, for up-to-date security and features along with stability.
-- **Open Source** — Everyone can participate in the development of JoJo-Browser. Join us on [Telegram](https://t.me/LeOS_Support).
+- **Fast Updates** — LibreWolf is always built from the latest Firefox stable source, for up-to-date security and features along with stability.
+- **Open Source** — Everyone can participate in the development of LibreWolf. Join us on [GitLab](https://gitlab.com/librewolf-community), [Matrix](https://matrix.to/#/#librewolf:matrix.org) and [Gitter](https://gitter.im/librewolf-community/librewolf).
 
 For more details read the full [feature list](https://librewolf.net/docs/features).
 </description>

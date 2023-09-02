@@ -6,9 +6,6 @@ source $BSYS6/exports/version.sh
 
 source "$BSYS6/source.sh"
 
-echo "rebranding"
-bash src/jojo.sh
-
 echo "-> Running 'mach build'" >&2
 # We need to be in the $SOURCE directory, otherwise the path could be too long for
 # the Microsoft (R) Macro Assembler.

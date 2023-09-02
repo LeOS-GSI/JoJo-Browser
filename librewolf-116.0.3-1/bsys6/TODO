@@ -1,0 +1,7 @@
+- Mount /tmp/bsys6 as volume and match user ids
+  https://linuxnatives.net/2019/align-user-ids-inside-and-outside-docker-with-subuser-mapping
+- Artifacts
+- Trap and clean up tmpdirs
+- Fix custom WORKDIR
+- Update artifacts on MOZCONFIG_CHANGED
+- Add distribution.ini

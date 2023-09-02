@@ -2,7 +2,7 @@
 
 # deb.sh - make the debian style `.deb` package file.
 echo "make JoJo's"
-#bash src/jojo.sh
+bash src/jojo.sh
 
 
 set -eu
