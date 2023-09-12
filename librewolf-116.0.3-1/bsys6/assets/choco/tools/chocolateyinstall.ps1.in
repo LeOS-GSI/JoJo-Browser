@@ -8,7 +8,7 @@ $packageArgs = @{
   fileType      = 'exe'
   url64bit      = $url64
 
-  softwareName  = 'LibreWolf'
+  softwareName  = 'JoJo-Browser'
 
   checksum64    = '${CHOCO_CHECKSUM}'
   checksumType64= 'sha256'
@@ -21,7 +21,7 @@ try {
   Install-ChocolateyPackage @packageArgs
 } catch  {
   if($_.Exception.Message -match "Exit code was '2'") {
-    throw "The installer exited with code 2. This means LibreWolf is probably still running. Close LibreWolf and try again."
+    throw "The installer exited with code 2. This means Meekat is probably still running. Close Meekat and try again."
   } else {
     throw $_.Exception
   }

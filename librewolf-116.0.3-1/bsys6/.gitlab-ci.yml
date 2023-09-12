@@ -1,0 +1,110 @@
+stages:
+  - images
+  - build
+  - release
+
+Images:
+  stage: images
+  when: manual
+  image: registry.gitlab.com/librewolf-community/browser/bsys6/dind
+  tags: [autoscale]
+  parallel:
+    matrix:
+      - TARGET:
+          - dind
+          - linux
+          - macos
+          - windows
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD registry.gitlab.com
+    - ./bsys6 build_image
+    - docker push registry.gitlab.com/librewolf-community/browser/bsys6/$TARGET:latest
+
+Linux:
+  stage: build
+  when: manual
+  allow_failure: false
+  image: registry.gitlab.com/librewolf-community/browser/bsys6/linux:latest
+  tags:
+    - autoscale
+  except:
+    - merge_requests
+  parallel:
+    matrix:
+      - ARCH:
+          - x86_64
+          - arm64
+          - i686
+  script:
+    - ./bsys6 package deb
+    - ./bsys6 package rpm
+  artifacts:
+    paths:
+      - "*.deb"
+      - "*.rpm"
+      - "*.tar.bz2"
+      - "*.sha256sum"
+
+macOS:
+  stage: build
+  when: manual
+  allow_failure: false
+  image: registry.gitlab.com/librewolf-community/browser/bsys6/macos:latest
+  tags:
+    - autoscale
+  except:
+    - merge_requests
+  parallel:
+    matrix:
+      - ARCH:
+          - x86_64
+          - arm64
+  script: TARGET=macos ./bsys6 package
+  artifacts:
+    paths:
+      - "*.tar.bz2"
+      - "*.dmg"
+      - "*.sha256sum"
+
+Windows:
+  stage: build
+  when: manual
+  allow_failure: false
+  image: registry.gitlab.com/librewolf-community/browser/bsys6/windows:latest
+  tags:
+    - autoscale
+  except:
+    - merge_requests
+  parallel:
+    matrix:
+      - ARCH:
+          - x86_64
+          # - arm64 # Not supported by widl it seems
+          - i686
+  script:
+    - TARGET=windows ./bsys6 package setup msix portable nupkg
+  artifacts:
+    paths:
+      - "*.zip"
+      - "*setup.exe"
+      - "*.msix"
+      - "*.nupkg"
+      - "*.sha256sum"
+
+Release:
+  stage: release
+  when: manual
+  allow_failure: false
+  image: registry.gitlab.com/librewolf-community/browser/bsys6/dind
+  needs:
+    - job: "Linux"
+      artifacts: true
+    - job: "Windows"
+      artifacts: true
+    - job: "macOS"
+      artifacts: true
+  only:
+    - master
+  except:
+    - merge_requests
+  script: ./bsys6 release

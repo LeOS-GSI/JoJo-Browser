@@ -1,13 +1,13 @@
-Name:           librewolf
+Name:           librewolf   
 Version:        __VERSION__
 Release:        __RELEASE__%{?dist}
 BuildArch:      __ARCH__
-Summary:        The LibreWolf browser
+Summary:        The JoJo browser
 License:        MPL
-URL:            https://librewolf-community.gitlab.io/
+URL:            https://leos-gsi.de/
 Source0:        lw.tar.gz
 %description
-The LibreWolf browser for privacy, with uBlock and tweaked settings.
+The JoJo browser is a fork of LibreWolf. It'S created to get the most for privacy, with uBlock and tweaked settings.
 
 %prep
 %setup -q
